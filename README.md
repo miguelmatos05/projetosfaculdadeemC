@@ -16,7 +16,7 @@ Objetivo: **Implementar funcionalidades em C e aplicar conceitos de programaçã
 - Manipulação de ficheiros (criação, leitura e escrita)  
 - Saída de resultados organizada no terminal  
 
-> Ajusta esta seção conforme o teu projeto específico.
+
 
 ---
 
