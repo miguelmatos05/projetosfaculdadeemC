@@ -23,7 +23,7 @@ Objetivo: **Implementar funcionalidades em C e aplicar conceitos de programaçã
 ## Tecnologias usadas
 - Linguagem: **C**  
 - Ambiente: **Ubuntu Linux**  
-- Ferramentas: **GCC** (compilador), **Terminal**, **Makefile** (opcional)  
+- Ferramentas: **GCC e Clang** (compiladores), **Terminal**, **Makefile** (opcional)  
 
 ---
 
