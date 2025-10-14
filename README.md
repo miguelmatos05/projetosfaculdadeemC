@@ -1,6 +1,6 @@
 # Projetos da faculdade 💻
 
-Estudante de **Engenharia Eletrotécnica e de Computadores na FEUP** | Projetos acadêmicos em **C** no Ubuntu.
+Estudante de **Engenharia Eletrotécnica e de Computadores na FEUP** | Projetos acadêmicos em **C** no Visual Studio Code.
 
 ---
 
