@@ -1,24 +1,53 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <math.h>
+
+int conta_digitos(int n){
+    
+    int count = 0;
+    
+    if(n==0) return 1;
+
+    while (n>0){
+        
+        count++;
+        n/= 10;
+    }
+
+    return count;
+}
+
+int contem(int a, int b){
+
+    int digitos_b = conta_digitos(b);
+    int divisor =(int) (pow(10,digitos_b));
+
+    while (a >= b){
+
+        int parte = a%divisor;
+
+        if(parte == b)
+        return 1;
+
+        a/=10;
+    }
+
+    return 0;
+}
 
 int main(){
 
-    int x, soma=0;
+    int a,b;
 
-    printf("Digite um número inteiro: ");
-    scanf("%d", &x);
+    scanf("%d", &a);
+    scanf("%d", &b);
 
-    if(x<0){
-        x=-x;
-    }
+    if(contem(a,b)){
+    printf("O número %d está contido em %d.\n", b,a);
 
-    while(x>0){
-        soma += x%10;
-        x /= 10;
-    }
+    }else{
+        printf("O número %d não está contido em %d.\n", b,a);
+}
 
-    printf("A soma dos digítos é: %d\n", soma);
-
-    return 0; 
-
+return 0;
 
 }

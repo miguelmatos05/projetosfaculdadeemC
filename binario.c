@@ -1,26 +1,41 @@
 #include <stdio.h>
-#include <math.h>
 
-int main(){
+int somabinaria(int a, int b) {
+    int carry = 0;       // inicializa o carry
+    int resultado = 0;   // resultado final
+    int i = 0;           // contador de bits
 
-    int a,b,c,d,D;
+    while (a != 0 || b != 0 || carry != 0) {
+        int bit_a = a & 1;
+        int bit_b = b & 1;
 
-    scanf("%d %d %d %d", &a,&b,&c,&d);
+        int soma = bit_a + bit_b + carry;
 
+        // adiciona o bit de soma ao resultado
+        resultado |= (soma % 2) << i;
 
-      if ((a> 1 || a< 0) || (b> 1 || b < 0) || 
-        (c>1 || c< 0) || (d> 1 || d< 0)) {
-        printf("Erro: todos os bits devem ser 0 ou 1.\n");
-        return 1;
+        // atualiza o carry
+        carry = soma / 2;
+
+        // desloca os operandos
+        a >>= 1;
+        b >>= 1;
+
+        i++;
     }
 
-    D=a*8+b*4+c*2+d*1;
+    return resultado;
+}
 
-    printf("O valor na base decimal: %d\n", D);
-    printf("O valor na base octal: %o\n", D);
-    printf("O valor na base hexadecimal: %X\n", D);
+int main() {
+    int a, b;
 
-    return 0; 
+    printf("Introduza dois números inteiros: ");
+    scanf("%d %d", &a, &b);
 
+    int soma = somabinaria(a, b);
 
+    printf("A soma é %d\n", soma);
+
+    return 0;
 }
